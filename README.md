@@ -5,3 +5,4 @@ Simple calculator made by using ```eval()``` function. <br>
 
 # Preview
 
+![Calculator Preview](calculator-preview.png)
