@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Calculator</title>
 </head>
 <body>
-    <script src="script.js"></script>
     <div class="calculator">
-        <input type="text" readonly id="display" value="0">
+        <input type="text" readonly id="display" value="">
         <div id="keys">
             <button onclick="appendDisplay('+')" class="operator">+</button>
             <button onclick="appendDisplay('7')">7</button>
@@ -26,9 +26,11 @@
             <button onclick="appendDisplay('/')" class="operator">/</button>
             <button onclick="appendDisplay('0')">0</button>
             <button onclick="appendDisplay('.')">.</button>
-            <button onclick="appendDisplay('=')">=</button>
-            <button onclick="clearDisplay('C')" class="operator">C</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()" class="operator">C</button>
+            <button onclick="deleteLastChar()" class="back"><i class="bi bi-backspace-fill"></i></button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
