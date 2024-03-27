@@ -1,7 +1,10 @@
 const display = document.getElementById("display");
 
 function appendDisplay(input) {
-    display.value = display.value + input;
+    if (display.value ==  "Error") {
+        display.value = "";
+    }
+        display.value += input;
 }
 
 function clearDisplay() {
@@ -9,5 +12,9 @@ function clearDisplay() {
 }
 
 function calculate() {
-    display.value = eval(display.value);
+    try {
+        display.value = eval(display.value) }
+    catch(error) {
+        display.value = "Error"
+    }
 }
